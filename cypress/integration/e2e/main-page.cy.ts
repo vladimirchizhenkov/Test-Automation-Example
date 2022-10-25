@@ -3,7 +3,7 @@ import MainPage from '../../support/pages/main-page';
 import SearchPage from '../../support/pages/search-page';
 import { PAGE_TITLES, PAGE_TYPES } from '../../support/constants/types';
 
-describe('TMGNews Site Cypress tests with POM pattern:', () => {
+describe('TMGNews Main page tests:', () => {
     const mainPage = PageFactory.create(PAGE_TYPES.MAIN) as MainPage;
     const searchPage = PageFactory.create(PAGE_TYPES.SEARCH) as SearchPage;
 
