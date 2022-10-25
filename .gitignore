@@ -1,0 +1,12 @@
+# JetBrains IDE files.
+.idea/
+.vscode/
+
+# Npm modules.
+node_modules/
+
+# Logs.
+**/*/logs
+
+# Cypress assets.
+cypress/assets/
