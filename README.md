@@ -3,7 +3,7 @@ Node v12.22.5
 Npm v7.5.2
 
 ### Install:
-Run command `npm i` from root directory.
+`npm i` from root directory.
 
 ### Run test scripts:
 #### unit:

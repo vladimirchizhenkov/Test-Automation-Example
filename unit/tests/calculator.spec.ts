@@ -1,8 +1,8 @@
-import { Calculator } from '../src/calculator';
-import { ErrorReporter } from '../src/error-reporter';
+import { Calculator } from '../support/src/calculator';
+import { ErrorReporter } from '../support/utils/error-reporter';
 import { expect } from 'chai';
 
-import { operation } from '../src/types';
+import { operation } from '../support/constants/types';
 
 describe('Tests for calculator:', () => {
     let calculator: any;
