@@ -4,10 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cy:open": "cypress open --config-file=cypress/cypress.config.ts",
-    "cy:run": "cypress run --browser chrome --headed --config-file=cypress/cypress.config.ts",
-    "cy:allure": "allure generate cypress/assets/reporter/allure-report --clean -o cypress/assets/reporter/allure-result && allure open cypress/assets/reporter/allure-result",
+    "cy-e2e:open": "cypress open --config-file=cypress/cypress-e2e.config.ts",
+    "cy-e2e:run": "cypress run --browser chrome --headed --config-file=cypress/cypress-e2e.config.ts",
+    "cy-e2e:allure": "allure generate cypress/assets/reporter/allure-report --clean -o cypress/assets/reporter/allure-result && allure open cypress/assets/reporter/allure-result",
     "unit:test": "mocha --config=unit/.mocharc.json",
+    "cy-api:open": "cypress open --config-file=cypress/cypress-api.config.ts",
+    "cy-api:run": "cypress run --browser chrome --headed --config-file=cypress/cypress-api.config.ts",
     "unit:nyc": "nyc npm run unit:test"
   },
   "author": "Vladimir Chizhenkov",

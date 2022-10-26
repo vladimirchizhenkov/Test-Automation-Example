@@ -21,4 +21,11 @@ const enum COOKIES {
     COOKIE_BLOCK = 'cookie-block-closed'
 }
 
-export { PAGE_TYPES, PAGE_TITLES, CSS_PROPS, ELEMENT_ATTRIBUTES, COOKIES }
+const enum METHOD {
+    GET = 'GET',
+    POST = 'POST',
+    PUT = 'PUT',
+    DELETE = 'DELETE'
+}
+
+export { PAGE_TYPES, PAGE_TITLES, CSS_PROPS, ELEMENT_ATTRIBUTES, COOKIES, METHOD}
