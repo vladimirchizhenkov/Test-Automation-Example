@@ -7,9 +7,9 @@ export default defineConfig({
         specPattern: "cypress/integration/e2e/**/*.cy.ts",
         defaultCommandTimeout: DEFAULT_TIMEOUT,
         supportFile: "cypress/support/index.ts",
-        videosFolder: `${ CYPRESS_ASSETS_DIR_PATH }/videos`,
-        downloadsFolder: `${ CYPRESS_ASSETS_DIR_PATH }/downloads`,
-        screenshotsFolder: `${ CYPRESS_ASSETS_DIR_PATH }/screenshots`,
+        videosFolder: `${ CYPRESS_ASSETS_DIR_PATH }/videos/e2e`,
+        downloadsFolder: `${ CYPRESS_ASSETS_DIR_PATH }/downloads/e2e`,
+        screenshotsFolder: `${ CYPRESS_ASSETS_DIR_PATH }/screenshots/e2e`,
         fixturesFolder: "cypress/fixtures",
         viewportWidth: 1200,
         viewportHeight: 1200,
@@ -19,7 +19,7 @@ export default defineConfig({
         },
         env: {
             allure: true,
-            allureResultsPath: `${ CYPRESS_ASSETS_DIR_PATH }/reporter/allure-report`
+            allureResultsPath: `${ CYPRESS_ASSETS_DIR_PATH }/reporter/e2e/allure-report`
         }
     }
 });

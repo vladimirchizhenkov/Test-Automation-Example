@@ -8,6 +8,7 @@ class HttpClient {
         this.baseUrl = BASE_URL_API
     }
 
+    // TODO: type request data.
     // Метод установки данных для запроса.
     setRequestData = (method: METHODS, url: string, body?: any): object => {
          return {
@@ -19,17 +20,14 @@ class HttpClient {
         }
     }
 
-    // GET-метод получения данных эндпоинта.
-    getResource = (url: string) => cy.request(this.setRequestData(METHODS.GET, url));
-
-    // POST-метод отправки данных на эндпоинт.
-    postResource = (method: METHODS.POST, url: string, body: any) => cy.request(this.setRequestData(method, url, body));
-
-    // PUT-метод обновления данных эндпоинта.
-    updateResource = (method: METHODS.PUT, url: string, body: any) => cy.request(this.setRequestData(method, url, body));
-
-    // DELETE-метод удаления данных эндпоинта.
-    deleteResource = (method: METHODS.DELETE, url: string, body: any) => cy.request(this.setRequestData(method, url, body));
+    // Основной метод http-запроса.
+    request = (method: METHODS, url: string, body?: any) => {
+       if (method === METHODS.GET) {
+           return cy.request(this.setRequestData(METHODS.GET, url));
+       } else {
+           return cy.request(this.setRequestData(method, url, body));
+       }
+    }
 }
 
 export default HttpClient;
