@@ -5,21 +5,22 @@ import { BASE_URL } from '../constants/constants';
 import { PAGE_TITLES } from '../constants/types';
 
 export default abstract class BasePage {
-    protected baseUrl: string = BASE_URL;
-    protected currentUrl!: string;
+    protected baseUrl: string;
+    protected pageUrl!: string;
 
     public cookie: Cookie;
     public bvi: Bvi;
     public searchPanelHeader: SearchPanelHeader;
 
     constructor() {
+        this.baseUrl = BASE_URL;
         this.cookie = new Cookie();
         this.bvi = new Bvi();
         this.searchPanelHeader = new SearchPanelHeader();
     }
 
     public visitPage = () => {
-        cy.visit(this.currentUrl);
+        cy.visit(this.pageUrl);
     }
 
     public get pageTitle() { return cy.title(); }
